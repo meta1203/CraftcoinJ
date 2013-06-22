@@ -147,7 +147,7 @@ public class NetworkParameters implements Serializable {
             addressHeader = 57;
 		if(type == 100) port = 10333;
             else port = 12124;
-            packetMagic = 0xfbc0b6db;
+            packetMagic = 0xfcd9b7dd;
             genesisBlock.setDifficultyTarget(0x1e0ffff0L);
             genesisBlock.setTime(1371051790L);
             genesisBlock.setNonce(1848112);
@@ -209,7 +209,7 @@ public class NetworkParameters implements Serializable {
             spendableCoinbaseDepth = 100;
             subsidyDecreaseBlockCount = 210000;
             String genesisHash = genesisBlock.getHashAsString();
-            checkState(genesisHash.equals("00000007199508e34a9ff81e6ec0c477a4cccff2a4767a8eee39c11db367b008"),
+            checkState(genesisHash.equals("64a9141746cbbe06c7e1a4b7f2abb968ccdeba66cd67c1add1091b29db00578e"),
                     genesisHash);
         } else if (type == -1) {
             genesisBlock = createGenesis(this);
@@ -239,13 +239,13 @@ public class NetworkParameters implements Serializable {
         try {
             // A script containing the difficulty bits and the following message:
             //
-            //   "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+            //   "Big Brother Is Watching You #PRISM"
             byte[] bytes = Hex.decode
-                    ("04b217bb4e022309");
+                    ("1d00ffff4269672042726f74686572204973205761746368696e6720596f752023505249534d");
             t.addInput(new TransactionInput(n, t, bytes));
             ByteArrayOutputStream scriptPubKeyBytes = new ByteArrayOutputStream();
             Script.writeBytes(scriptPubKeyBytes, Hex.decode
-                    ("41044870341873accab7600d65e204bb4ae47c43d20c562ebfbf70cbcb188da98dec8b5ccf0526c8e4d954c6b47b898cc30adf1ff77c2e518ddc9785b87ccb90b8cdac"));
+                    ("0"));
             scriptPubKeyBytes.write(Script.OP_CHECKSIG);
             t.addOutput(new TransactionOutput(n, t, Utils.toNanoCoins(50, 0), scriptPubKeyBytes.toByteArray()));
         } catch (Exception e) {

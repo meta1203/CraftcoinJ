@@ -50,7 +50,7 @@ public class IrcDiscovery implements PeerDiscovery {
      *                respectively.
      */
     public IrcDiscovery(String channel) {
-        this(channel, "irc.lfnet.org", 6667);
+        this(channel, "irc.smutfairy.com", 6667);
     }
 
     /**
