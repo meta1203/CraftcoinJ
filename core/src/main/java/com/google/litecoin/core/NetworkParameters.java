@@ -151,7 +151,7 @@ public class NetworkParameters implements Serializable {
             genesisBlock.setDifficultyTarget(0x1e0ffff0L);
             genesisBlock.setTime(1371051790L);
             genesisBlock.setNonce(1848112);
-            genesisBlock.setMerkleRoot(new Sha256Hash("97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+            genesisBlock.setMerkleRoot(new Sha256Hash("71af8a6b906ecef9cf9cb05a593639f6bd2db7cefb9b2ceaed9065b97b01fa35"));
             id = ID_PRODNET;
             subsidyDecreaseBlockCount = 840000;
             allowEmptyPeerChains = false;
