@@ -141,10 +141,10 @@ public class NetworkParameters implements Serializable {
             genesisBlock = createGenesis(this);
             interval = INTERVAL;
             targetTimespan = TARGET_TIMESPAN;
-            proofOfWorkLimit = Utils.decodeCompactBits(0x1e0fffffL);
-            acceptableAddressCodes = new int[] { 48 };
+            proofOfWorkLimit = Utils.decodeCompactBits(0x1e0ffff0L);
+            acceptableAddressCodes = new int[] { 57 };
             dumpedPrivateKeyHeader = 128;
-            addressHeader = 48;
+            addressHeader = 57;
 		if(type == 100) port = 10333;
             else port = 12124;
             packetMagic = 0xfbc0b6db;
@@ -279,8 +279,8 @@ public class NetworkParameters implements Serializable {
         return genesisBlock;
     }
 
-    public static final int TARGET_TIMESPAN = (int)(3.5 * 24 * 60 * 60);  // 3.5 days per difficulty cycle, on average.
-    public static final int TARGET_SPACING = (int)(2.5 * 60);  // 2.5 minutes per block.
+    public static final int TARGET_TIMESPAN = (int)(24 * 60 * 60);  // 3.5 days per difficulty cycle, on average.
+    public static final int TARGET_SPACING = (int)(5 * 60);  // 2.5 minutes per block.
     public static final int INTERVAL = TARGET_TIMESPAN / TARGET_SPACING;
     
     /**
@@ -293,7 +293,7 @@ public class NetworkParameters implements Serializable {
     /**
      * The maximum money to be generated
      */
-    public static final BigInteger MAX_MONEY = new BigInteger("84000000", 10).multiply(COIN);
+    public static final BigInteger MAX_MONEY = new BigInteger("100000000", 10).multiply(COIN);
 
     /** Returns whatever the latest testNet parameters are.  Use this rather than the versioned equivalents. */
     public static NetworkParameters testNet() {
