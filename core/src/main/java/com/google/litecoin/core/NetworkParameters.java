@@ -146,18 +146,18 @@ public class NetworkParameters implements Serializable {
             dumpedPrivateKeyHeader = 128;
             addressHeader = 48;
 		if(type == 100) port = 10333;
-            else port = 9333;
+            else port = 12124;
             packetMagic = 0xfbc0b6db;
             genesisBlock.setDifficultyTarget(0x1e0ffff0L);
-            genesisBlock.setTime(1317972665L);
-            genesisBlock.setNonce(2084524493L);
+            genesisBlock.setTime(1371051790L);
+            genesisBlock.setNonce(1848112);
             genesisBlock.setMerkleRoot(new Sha256Hash("97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
             id = ID_PRODNET;
             subsidyDecreaseBlockCount = 840000;
             allowEmptyPeerChains = false;
             spendableCoinbaseDepth = 100;
             String genesisHash = genesisBlock.getHashAsString();
-            checkState(genesisHash.equals("12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2"),
+            checkState(genesisHash.equals("64a9141746cbbe06c7e1a4b7f2abb968ccdeba66cd67c1add1091b29db00578e"),
                     genesisHash);
 
             // This contains (at a minimum) the blocks which are not BIP30 compliant. BIP30 changed how duplicate
