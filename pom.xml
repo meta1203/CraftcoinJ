@@ -3,14 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.google</groupId>
-  <artifactId>CraftcoinJ</artifactId>
-  <version>0.81-SNAPSHOT</version>
+  <artifactId>CraftcoinJ-parent</artifactId>
+  <version>0.81</version>
   <packaging>pom</packaging>
 
   <modules>
     <module>core</module>
-    <module>examples</module>
-    <module>tools</module>
   </modules>
 
   <name>CraftcoinJ Parent</name>

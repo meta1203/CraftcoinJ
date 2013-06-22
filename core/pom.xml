@@ -21,15 +21,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.google</groupId>
-        <artifactId>litecoinj-parent</artifactId>
+        <artifactId>CraftcoinJ-parent</artifactId>
         <version>0.81-SNAPSHOT</version>
     </parent>
 
     <groupId>com.google</groupId>
-    <artifactId>litecoinj</artifactId>
+    <artifactId>CraftcoinJ</artifactId>
 
-    <name>litecoinj</name>
-    <description>A Java Litecoin library</description>
+    <name>CraftcoinJ</name>
+    <description>A Java Craftcoin library</description>
 
     <profiles>
         <profile>
